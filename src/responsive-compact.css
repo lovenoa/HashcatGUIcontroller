@@ -1,0 +1,59 @@
+@media (max-width: 1180px) {
+  .workspace-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .command-panel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+
+  .sidebar {
+    width: 72px;
+    padding: 12px 9px;
+  }
+
+  .workspace-main,
+  .single-page {
+    padding: 16px 14px 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    display: block;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+  }
+
+  .nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .nav-item {
+    min-height: 40px;
+  }
+
+  .workspace-main,
+  .single-page {
+    padding: 14px 10px 24px;
+  }
+
+  .command-panel {
+    padding: 12px 10px;
+  }
+}

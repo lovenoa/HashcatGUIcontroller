@@ -1,0 +1,17 @@
+.run-actions {
+  display: flex;
+  min-width: 0;
+  gap: 5px;
+}
+
+.run-actions .button {
+  min-width: 0;
+  padding: 0 8px;
+}
+
+@media (max-width: 560px) {
+  .run-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,502 @@
+.app-shell {
+  grid-template-columns: 208px minmax(0, 1fr);
+}
+
+.sidebar {
+  width: 208px;
+  padding: 12px 10px;
+}
+
+.brand {
+  min-height: 38px;
+  gap: 8px;
+  padding: 0 7px 12px;
+}
+
+.brand-mark {
+  width: 30px;
+  height: 30px;
+}
+
+.nav {
+  gap: 2px;
+  padding-top: 14px;
+}
+
+.nav-label {
+  padding-bottom: 5px;
+}
+
+.nav-item {
+  min-height: 34px;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.runtime-card {
+  gap: 5px;
+  padding: 9px;
+  margin-bottom: 5px;
+}
+
+.sidebar-link {
+  min-height: 30px;
+  padding: 0 8px;
+}
+
+.workspace-layout {
+  grid-template-columns: minmax(580px, 1fr) 332px;
+}
+
+.workspace-main,
+.single-page {
+  padding: 18px 20px 32px;
+}
+
+.page-toolbar {
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.page-toolbar p {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.toolbar-actions,
+.inline-actions {
+  gap: 6px;
+}
+
+h1 {
+  margin-bottom: 4px;
+  font-size: 24px;
+}
+
+h2 {
+  margin-bottom: 3px;
+  font-size: 16px;
+}
+
+p {
+  line-height: 1.45;
+}
+
+.eyebrow {
+  margin-bottom: 5px;
+  font-size: 9px;
+}
+
+.section {
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.section-heading {
+  min-height: 54px;
+  gap: 12px;
+  padding: 11px 16px 9px;
+}
+
+.section-heading h2 {
+  margin-bottom: 2px;
+}
+
+.section-heading p {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.section-body {
+  padding: 12px 16px 14px;
+}
+
+.button {
+  min-height: 30px;
+  gap: 6px;
+  padding: 0 10px;
+  font-size: 11px;
+}
+
+.icon-button {
+  width: 26px;
+  height: 26px;
+  flex-basis: 26px;
+}
+
+.icon-button.subtle {
+  width: 20px;
+  height: 20px;
+  flex-basis: 20px;
+}
+
+.field {
+  gap: 4px;
+}
+
+.field-label {
+  min-height: 18px;
+  font-size: 10px;
+}
+
+.field small {
+  min-height: 13px;
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+.text-input,
+.select-input {
+  height: 31px;
+  padding: 0 8px;
+  font-size: 11px;
+}
+
+.text-area {
+  min-height: 72px;
+  padding: 8px;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.select-input {
+  padding-right: 27px;
+}
+
+.target-grid,
+.settings-grid {
+  gap: 10px 12px;
+}
+
+.target-summary > div {
+  min-height: 48px;
+  padding: 8px 10px;
+}
+
+.target-summary > div > span:first-child,
+.command-meta > div > span:first-child,
+.session-summary > div > span:first-child,
+.mask-summary > div > span:first-child {
+  margin-bottom: 3px;
+  font-size: 9px;
+}
+
+.target-summary strong,
+.session-summary strong,
+.mask-summary strong {
+  gap: 4px;
+  font-size: 11px;
+}
+
+.algorithm-summary {
+  gap: 5px;
+  font-size: 10px;
+}
+
+.attack-editor {
+  gap: 12px;
+}
+
+.attack-mode-strip {
+  gap: 4px;
+}
+
+.attack-mode-option {
+  min-height: 46px;
+  padding: 6px 7px;
+  border-radius: 5px;
+}
+
+.attack-mode-main {
+  gap: 2px;
+  padding: 6px 7px;
+}
+
+.mode-number {
+  font-size: 8px;
+}
+
+.mode-name {
+  font-size: 10px;
+}
+
+.attack-description {
+  padding: 7px 9px;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.editor-block {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.editor-block.compact {
+  padding-bottom: 11px;
+}
+
+.editor-block-heading {
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.editor-block-heading strong {
+  font-size: 11px;
+}
+
+.editor-block-heading small {
+  margin-top: 2px;
+  font-size: 9px;
+}
+
+.repeat-list {
+  gap: 5px;
+}
+
+.repeat-row {
+  grid-template-columns: 32px minmax(120px, 1fr) 112px 26px;
+  gap: 6px;
+}
+
+.row-index {
+  font-size: 9px;
+}
+
+.inline-fields {
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.mask-summary {
+  gap: 8px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.custom-charset-grid {
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tabs-list {
+  gap: 1px;
+  padding: 2px;
+}
+
+.tabs-list button {
+  min-height: 27px;
+  padding: 0 9px;
+  font-size: 10px;
+}
+
+.tabs-content {
+  padding-top: 10px;
+}
+
+.toggle-grid {
+  gap: 5px;
+}
+
+.toggle-row {
+  min-height: 38px;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 5px;
+}
+
+.toggle-label {
+  font-size: 10px;
+}
+
+.toggle-row small {
+  margin-top: 2px;
+  font-size: 8px;
+  line-height: 1.35;
+}
+
+.switch {
+  width: 30px;
+  height: 18px;
+  flex-basis: 30px;
+}
+
+.switch-thumb {
+  width: 14px;
+  height: 14px;
+  transform: translateX(2px);
+}
+
+.switch-thumb[data-state="checked"] {
+  transform: translateX(14px);
+}
+
+.workspace-footer-note {
+  gap: 6px;
+  font-size: 9px;
+}
+
+.command-panel {
+  width: 332px;
+  padding: 14px 12px;
+}
+
+.command-header {
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.command-header h2 {
+  font-size: 15px;
+}
+
+.command-code-wrap {
+  min-height: 82px;
+  margin-bottom: 8px;
+}
+
+.command-code {
+  min-height: 82px;
+  max-height: 170px;
+  padding: 10px 34px 10px 10px;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.copy-button {
+  top: 6px;
+  right: 6px;
+}
+
+.command-meta {
+  margin-bottom: 8px;
+}
+
+.command-meta > div {
+  min-height: 46px;
+  padding: 8px;
+}
+
+.diagnostic-list {
+  gap: 5px;
+}
+
+.diagnostic {
+  gap: 6px;
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.diagnostic p {
+  margin-top: 2px;
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+.run-metrics {
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.run-progress-head {
+  margin-bottom: 5px;
+}
+
+.run-metric-grid {
+  gap: 6px 8px;
+  margin-top: 8px;
+}
+
+.run-log {
+  margin-top: 8px;
+}
+
+.command-actions {
+  gap: 6px;
+  margin-top: 9px;
+}
+
+.command-footnote {
+  padding-top: 10px;
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+.catalog-table td,
+.device-table td {
+  padding: 7px 8px;
+}
+
+.catalog-table th,
+.device-table th {
+  padding: 7px 8px;
+}
+
+.history-table th {
+  padding: 7px 8px;
+}
+
+.history-table td {
+  padding: 7px 8px;
+}
+
+.empty-state {
+  min-height: 128px;
+  padding: 18px;
+}
+
+.recommendation {
+  min-height: 108px;
+  gap: 7px;
+  padding: 11px;
+}
+
+.session-summary > div {
+  min-height: 56px;
+  padding: 9px 10px;
+}
+
+.session-guidance {
+  gap: 9px;
+  padding: 10px;
+}
+
+@media (max-width: 1180px) {
+  .command-panel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 860px) {
+  .workspace-main,
+  .single-page {
+    padding: 16px 14px 28px;
+  }
+
+  .section-heading {
+    min-height: 50px;
+    padding: 10px 12px 8px;
+  }
+
+  .section-body {
+    padding: 10px 12px 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .workspace-main,
+  .single-page {
+    padding: 14px 10px 24px;
+  }
+
+  .command-panel {
+    padding: 12px 10px;
+  }
+
+  .command-actions {
+    grid-template-columns: 1fr;
+  }
+}

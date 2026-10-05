@@ -1,0 +1,12 @@
+node_modules/
+hashcat-7.1.2-binaries/
+hashcat-7.1.2-sources/
+kernels/
+dist/
+src-tauri/target/
+src-tauri/gen/schemas/
+*.tsbuildinfo
+src-tauri/icons/android/
+src-tauri/icons/ios/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,12 @@
+.converter-form {
+  margin-bottom: 12px;
+}
+
+.converter-action {
+  display: flex;
+  align-items: end;
+}
+
+.converter-action .button {
+  width: 100%;
+}

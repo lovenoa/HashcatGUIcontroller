@@ -1,0 +1,17 @@
+.format-specific {
+  grid-column: 1 / -1;
+  padding: 12px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.format-specific > strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+}
+
+.format-specific .settings-grid {
+  gap: 12px;
+}

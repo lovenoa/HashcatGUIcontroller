@@ -1,0 +1,14 @@
+@media (max-width: 560px) {
+  .repeat-row {
+    grid-template-columns: 28px minmax(0, 1fr) 28px;
+  }
+
+  .repeat-row .select-wrap {
+    grid-column: 2 / 3;
+  }
+
+  .repeat-row .icon-button {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+}

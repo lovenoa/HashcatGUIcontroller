@@ -1,0 +1,134 @@
+.attack-mode-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3px;
+  min-width: 0;
+  padding: 8px 9px;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.command-actions {
+  grid-template-columns: 1fr auto auto;
+}
+
+.run-metrics {
+  padding: 11px;
+  margin-top: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.run-progress-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  font-size: 10px;
+}
+
+.run-progress-head span {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.run-progress-head strong {
+  color: var(--accent-dark);
+}
+
+.progress-track {
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+  background: var(--surface-strong);
+  border-radius: 3px;
+}
+
+.progress-track > div {
+  height: 100%;
+  background: var(--accent);
+  border-radius: inherit;
+  transition: width 180ms ease;
+}
+
+.run-metric-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px 12px;
+  margin-top: 11px;
+}
+
+.run-metric-grid span,
+.run-metric-grid strong {
+  display: block;
+}
+
+.run-metric-grid span {
+  margin-bottom: 3px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.run-metric-grid strong {
+  font-size: 10px;
+}
+
+.history-table-wrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.history-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  background: var(--surface);
+  font-size: 10px;
+}
+
+.history-table th {
+  padding: 9px 10px;
+  color: var(--muted);
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--line);
+  font-size: 9px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.history-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.history-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.history-table td strong,
+.history-table td code {
+  display: block;
+}
+
+.history-table td code {
+  max-width: 300px;
+  margin-top: 4px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .command-actions {
+    grid-template-columns: 1fr;
+  }
+}

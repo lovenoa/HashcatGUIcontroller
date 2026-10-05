@@ -1,0 +1,63 @@
+.file-preview {
+  max-height: 320px;
+  margin: 12px 0 0;
+  padding: 10px;
+  overflow: auto;
+  color: var(--ink);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 9px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.artifact-table-wrap {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.artifact-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  background: var(--surface);
+  font-size: 10px;
+}
+
+.artifact-table th {
+  padding: 8px;
+  color: var(--muted);
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--line);
+  font-size: 9px;
+  text-align: left;
+}
+
+.artifact-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.artifact-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.artifact-table td strong,
+.artifact-table td small {
+  display: block;
+}
+
+.artifact-table td small {
+  max-width: 520px;
+  margin-top: 3px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

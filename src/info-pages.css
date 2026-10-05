@@ -1,0 +1,141 @@
+.guidance-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.guidance-step {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 8px;
+  min-height: 86px;
+  padding: 10px;
+  background: var(--surface-soft);
+}
+
+.guidance-step > span {
+  color: var(--accent);
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.guidance-step strong {
+  font-size: 10px;
+}
+
+.guidance-step p {
+  margin: 4px 0 0;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.guidance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.guidance-grid > div {
+  min-height: 78px;
+  padding: 10px;
+  background: var(--surface-soft);
+}
+
+.guidance-grid svg {
+  color: var(--accent);
+}
+
+.guidance-grid strong {
+  display: block;
+  margin: 7px 0 4px;
+  font-size: 10px;
+}
+
+.guidance-grid p {
+  margin: 0;
+  font-size: 9px;
+}
+
+.document-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.document-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  gap: 6px;
+  padding: 0 10px;
+  color: var(--blue);
+  background: var(--blue-soft);
+  border: 1px solid #bfd2df;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.readonly-value {
+  display: flex;
+  align-items: center;
+  min-height: 31px;
+  padding: 0 9px;
+  color: var(--ink);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.settings-note {
+  padding: 9px 10px;
+  color: var(--muted);
+  background: var(--surface-soft);
+  border-left: 3px solid var(--accent);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.file-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.file-button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 1180px) {
+  .guidance-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .guidance-steps,
+  .guidance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .guidance-steps,
+  .guidance-grid {
+    grid-template-columns: 1fr;
+  }
+}

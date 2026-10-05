@@ -1,0 +1,27 @@
+.path-drop {
+  position: relative;
+  min-width: 0;
+}
+
+.path-drop .text-input {
+  padding-right: 30px;
+}
+
+.path-drop > svg {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  color: var(--muted);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.path-drop.dragging .text-input {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+.path-drop.dragging > svg {
+  color: var(--accent);
+}

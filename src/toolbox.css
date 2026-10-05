@@ -1,0 +1,137 @@
+.tool-summary-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.tool-summary-row > div {
+  min-height: 52px;
+  padding: 8px 10px;
+  background: var(--surface-soft);
+}
+
+.tool-summary-row span,
+.tool-summary-row strong {
+  display: block;
+}
+
+.tool-summary-row span {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.tool-summary-row strong {
+  font-size: 11px;
+}
+
+.tool-command,
+.tool-output {
+  margin: 0;
+  padding: 10px;
+  overflow: auto;
+  color: #d9f4ed;
+  background: #202723;
+  border-radius: 4px;
+  font-family: "Cascadia Code", Consolas, monospace;
+  font-size: 9px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.tool-output {
+  max-height: 280px;
+  color: var(--ink);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+}
+
+.keyspace-result {
+  display: grid;
+  grid-template-columns: auto 1fr minmax(120px, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0 0;
+  margin-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.keyspace-result span,
+.keyspace-result strong {
+  display: block;
+}
+
+.keyspace-result span {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.keyspace-result strong {
+  color: var(--accent-dark);
+  font-size: 16px;
+}
+
+.keyspace-result code {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tool-link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.tool-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-height: 50px;
+  padding: 8px 10px;
+  background: var(--surface-soft);
+}
+
+.tool-link strong,
+.tool-link small {
+  display: block;
+}
+
+.tool-link strong {
+  font-size: 10px;
+}
+
+.tool-link small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 8px;
+  line-height: 1.35;
+}
+
+@media (max-width: 560px) {
+  .tool-summary-row,
+  .tool-link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .keyspace-result {
+    grid-template-columns: auto 1fr;
+  }
+
+  .keyspace-result code {
+    grid-column: 1 / -1;
+  }
+}
