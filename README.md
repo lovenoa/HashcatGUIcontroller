@@ -33,7 +33,7 @@ npm run release:build
 ```
 
 `release:check` runs tests, frontend production build, Rust Clippy with warnings denied, and release configuration checks.
-`release:build` creates the Windows NSIS installer in `src-tauri/target/release/bundle/nsis/`.
+`release:build` creates and verifies the Windows NSIS installer in `src-tauri/target/release/bundle/nsis/`. The installer places `WebView2Loader.dll` beside `hashcat-gui.exe`; the Microsoft WebView2 Runtime remains a system prerequisite.
 
 ## Checks
 

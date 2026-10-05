@@ -11,7 +11,8 @@
     "generate:catalog": "node scripts/generate-hash-mode-catalog.mjs",
     "tauri": "node scripts/run-tauri.mjs",
     "release:check": "node scripts/release-check.mjs",
-    "release:build": "npm run release:check && node scripts/run-tauri.mjs build --bundles nsis"
+    "verify:bundle": "node scripts/verify-release-bundle.mjs",
+    "release:build": "npm run release:check && node scripts/run-tauri.mjs build --bundles nsis && npm run verify:bundle"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "1.1.23",

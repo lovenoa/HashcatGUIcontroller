@@ -47,6 +47,10 @@ for (const file of sourceFiles) {
 const config = JSON.parse(readFileSync(resolve(root, "src-tauri", "tauri.conf.json"), "utf8"));
 assert(config.bundle?.active === true, "Tauri bundle must be active");
 assert(Array.isArray(config.bundle?.targets) && config.bundle.targets.includes("nsis"), "NSIS target must be configured");
+assert(
+  config.bundle?.resources?.["target/release/WebView2Loader.dll"] === "WebView2Loader.dll",
+  "WebView2Loader.dll must be copied beside the Windows executable"
+);
 
 run(process.execPath, [npmCli, "test"]);
 run(process.execPath, [npmCli, "run", "build"]);

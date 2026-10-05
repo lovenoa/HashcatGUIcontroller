@@ -1,6 +1,7 @@
 # Hashcat Studio Release Review
 
 日期：2026-10-05
+修订日期：2026-10-06
 目标版本：0.1.0
 平台：Windows 10/11 x64
 
@@ -14,8 +15,8 @@
 
 - NSIS 安装包：`src-tauri/target/release/bundle/nsis/Hashcat Studio_0.1.0_x64-setup.exe`
 - 主程序：`src-tauri/target/release/hashcat-gui.exe`
-- 安装包 SHA-256：`3A72D4F984990A519E7C7F2B0E3BBC2C8B5709CFD138DA7B59A68C4E74F41407`
-- 主程序 SHA-256：`3A5493D9725FAB10FCCCAFAC703A379EE37FA153D1009CF2B11787584E9B8338`
+- 安装包 SHA-256：`5ACE8995B3DDCEB9778FF8CDB6882C96EC6083D0464F839DCBD7EDF530494B1C`
+- 主程序 SHA-256：`DFC439132DA89EFFC567609F3C8F8E2403603E035EDFB958150374FDFBB9DB6F`
 
 ## 自动检查
 
@@ -30,6 +31,8 @@
 | npm 生产依赖审计 | 0 vulnerabilities |
 | TODO/FIXME/HACK/源码工具残留 | 0 |
 | NSIS release build | 通过 |
+| NSIS 静默安装布局验证 | 通过，主程序旁包含 `WebView2Loader.dll` |
+| 安装版启动冒烟测试 | 通过，进程持续运行并正常响应 |
 | hashcat 7.1.2 算法目录 | 582 项 |
 
 ## 命令覆盖
@@ -57,6 +60,7 @@ hashcat 7.1.2 共检测到 139 个长参数。134 个由命令编译器、命令
 - 桌面 WebView 中官方资料链接无法调用系统浏览器。
 - 进程结束时输出线程尚未刷新，导致最终状态停在“正在计算”。
 - 运行历史没有清理入口。
+- Windows 安装包遗漏 `WebView2Loader.dll`，导致安装版无法启动；现已随主程序安装并增加自动布局验证。
 
 ## 发布条件
 
