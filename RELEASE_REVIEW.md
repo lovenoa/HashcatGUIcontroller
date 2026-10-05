@@ -15,8 +15,8 @@
 
 - NSIS 安装包：`src-tauri/target/release/bundle/nsis/Hashcat Studio_0.1.0_x64-setup.exe`
 - 主程序：`src-tauri/target/release/hashcat-gui.exe`
-- 安装包 SHA-256：`5ACE8995B3DDCEB9778FF8CDB6882C96EC6083D0464F839DCBD7EDF530494B1C`
-- 主程序 SHA-256：`DFC439132DA89EFFC567609F3C8F8E2403603E035EDFB958150374FDFBB9DB6F`
+- 安装包 SHA-256：`F6557A87865E392AF9E6CAB031A089FE5858CDAD2734E533404FC88DE5CBC70B`
+- 主程序 SHA-256：`C3776FA8A21722249592C89222ED141AE2338A0D91C04E38635EFFD45DF15E63`
 
 ## 自动检查
 
@@ -33,6 +33,7 @@
 | NSIS release build | 通过 |
 | NSIS 静默安装布局验证 | 通过，主程序旁包含 `WebView2Loader.dll` |
 | 安装版启动冒烟测试 | 通过，进程持续运行并正常响应 |
+| Windows GUI 子系统检查 | 通过，启动时不附带命令提示符 |
 | hashcat 7.1.2 算法目录 | 582 项 |
 
 ## 命令覆盖
@@ -61,6 +62,7 @@ hashcat 7.1.2 共检测到 139 个长参数。134 个由命令编译器、命令
 - 进程结束时输出线程尚未刷新，导致最终状态停在“正在计算”。
 - 运行历史没有清理入口。
 - Windows 安装包遗漏 `WebView2Loader.dll`，导致安装版无法启动；现已随主程序安装并增加自动布局验证。
+- 发布主程序使用控制台子系统，启动时额外打开命令提示符；现已改为 Windows GUI 子系统，任务日志窗口继续由独立开关控制。
 
 ## 发布条件
 

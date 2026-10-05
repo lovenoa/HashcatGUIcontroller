@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { existsSync, mkdirSync, rmSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve, sep } from "node:path";
 
@@ -31,6 +31,14 @@ function run(file, args, cwd = tempRoot) {
   if (result.status !== 0) fail(`${file} exited with code ${result.status}`);
 }
 
+function assertGuiSubsystem(file) {
+  const image = readFileSync(file);
+  const peOffset = image.readUInt32LE(0x3c);
+  if (image.readUInt32LE(peOffset) !== 0x0000_4550) fail(`${file} is not a valid PE executable`);
+  const subsystem = image.readUInt16LE(peOffset + 24 + 68);
+  if (subsystem !== 2) fail(`${file} must use the Windows GUI subsystem, found ${subsystem}`);
+}
+
 if (!existsSync(installer)) fail(`installer not found at ${installer}`);
 if (!installRoot.startsWith(`${tempRoot}${sep}`)) {
   fail(`refusing to use a verification directory outside ${tempRoot}`);
@@ -45,7 +53,8 @@ try {
     if (!existsSync(join(installRoot, file))) fail(`${file} was not installed beside hashcat-gui.exe`);
   }
 
-  console.log("NSIS bundle verification passed: executable and WebView2 loader are present.");
+  assertGuiSubsystem(join(installRoot, "hashcat-gui.exe"));
+  console.log("NSIS bundle verification passed: GUI executable and WebView2 loader are present.");
 } finally {
   const uninstaller = join(installRoot, "uninstall.exe");
   if (existsSync(uninstaller)) run(uninstaller, ["/S"]);
